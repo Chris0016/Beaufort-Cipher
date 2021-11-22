@@ -1,3 +1,7 @@
+/**
+*@author Christopher Perez
+*@version 1.0.0
+*/
 public class Beaufort{
 	private String plaintext;
 	private String key;
@@ -16,8 +20,7 @@ public class Beaufort{
 	}
 
 	public void encrypt(){
-		char curr, newChar;
-		int offset, pos, posNew;
+		int offset, pos;
 		int count = 0;
 		for(int i = 0; i < pTextLength; i++ ){
 			offset = plaintext.charAt(i) - 64;
@@ -53,6 +56,7 @@ public class Beaufort{
 	public void setPlaintext(String plaintext){
 		this.plaintext = plaintext.toUpperCase();;
 		this.pTextLength = plaintext.length();
+		this.encryptedText = "";
 	}
 
 	public void setKey(String key){
